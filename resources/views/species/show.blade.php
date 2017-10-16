@@ -45,25 +45,13 @@
             $("#showHistoryBtn").show();
             $(".historyBtn").hide();
         });
+		$('#collapse1').collapse("show");
     });
+
+	
 </script>
 @endsection
 @section('content')
-    <div class="row">
-        <div class="col-12">
-            <a href="#" id="showHistoryBtn" class="no-loading btn btn-outline-primary float-right" style="margin-left: 15px;">Show History Buttons</a>
-            <a href="#" id="hideHistoryBtn" class="no-loading btn btn-outline-primary float-right" style="margin-left: 15px; display: none;">Hide History Buttons</a>
-            <a href="{{route('species.edit', ['id' => $species->id])}}" class="float-right btn btn-outline-primary">Edit This Species</a>
-        </div>
-        <div class="col-12">
-            <p style="text-align: right; margin: 0; color: gray;">Version: {{$species->version}} </p>
-            <p style="text-align: right; margin: 0; color: gray;">Created By: {{\App\User::find($species->user_id)->name}}</p>
-            <p style="text-align: right; margin: 0; color: gray;">Created At: {{$species->created_at}}</p>
-            @if(!$species->is_approved)
-                <p style="text-align: right; margin: 0; color: #941728;">This version hasn't been approved</p>
-            @endif
-        </div>
-    </div>
 	<h1 style="text-align: center;">
 	{{$species->species_name}} | {{$species->common_name}}
 	</h1>
@@ -347,4 +335,19 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+        <div class="col-12">
+            <a href="#" id="showHistoryBtn" class="no-loading btn btn-outline-primary float-right" style="margin-left: 15px;">Show History Buttons</a>
+            <a href="#" id="hideHistoryBtn" class="no-loading btn btn-outline-primary float-right" style="margin-left: 15px; display: none;">Hide History Buttons</a>
+            <a href="{{route('species.edit', ['id' => $species->id])}}" class="float-right btn btn-outline-primary">Edit This Species</a>
+        </div>
+        <div class="col-12">
+            <p style="text-align: right; margin: 0; color: gray;">Version: {{$species->version}} </p>
+            <p style="text-align: right; margin: 0; color: gray;">Created By: {{\App\User::find($species->user_id)->name}}</p>
+            <p style="text-align: right; margin: 0; color: gray;">Created At: {{$species->created_at}}</p>
+            @if(!$species->is_approved)
+                <p style="text-align: right; margin: 0; color: #941728;">This version hasn't been approved</p>
+            @endif
+        </div>
+    </div>
 @endsection

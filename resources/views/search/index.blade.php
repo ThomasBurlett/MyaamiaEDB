@@ -43,17 +43,27 @@
 
             window.location.href = "{{route('search.result')}}?type=advancedSearch&q=" + JSON.stringify(objectifyForm($('#advancedSearchForm').serializeArray()));
         });
+		
+		$(document).ready(function() {
+		$('#collapse1').collapse("show");
+		});
     </script>
 @endsection
 @section('content')
 
     {{Form::open(['route' => 'species.store', 'id' => 'advancedSearchForm'])}}
-	<h4 class="panel-title">
-		Name Types
-	</h4>
-	<div class="row">
-
-		@foreach ($schemeArr as $scheme)
+		<div class="panel-group">
+		  <div class="panel panel-default">
+			<div class="panel-heading">
+			  <h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse1">Name Types</a>
+			  </h4>
+			</div>
+			<div id="collapse1" class="panel-collapse collapse">
+			  <div class="panel-body">
+				<div class="row">
+				
+				@foreach ($schemeArr as $scheme)
 			@if ($scheme->category == 'name_type')
 				<div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
 					<div class="form-group">
@@ -63,8 +73,12 @@
 				</div>
 			@endif
 		@endforeach
-	</div>
-		<br>
+			  </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	<br>
 		<div class="panel-group">
 		  <div class="panel panel-default">
 			<div class="panel-heading">
