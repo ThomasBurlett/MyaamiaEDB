@@ -47,6 +47,7 @@
 		$(document).ready(function() {
 		$('#collapse1').collapse("show");
 		});
+		
     </script>
 @endsection
 @section('content')

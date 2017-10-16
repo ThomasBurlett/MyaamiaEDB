@@ -48,7 +48,6 @@
 		$('#collapse1').collapse("show");
     });
 
-	
 </script>
 @endsection
 @section('content')
