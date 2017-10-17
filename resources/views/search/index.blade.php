@@ -53,6 +53,7 @@
 @section('content')
 
     {{Form::open(['route' => 'species.store', 'id' => 'advancedSearchForm'])}}
+	<a href="#" class="btn btn-primary" id="advancedSearchBtn" style="float: right;">Search</a>
 		<div class="panel-group">
 		  <div class="panel panel-default">
 			<div class="panel-heading">
@@ -269,7 +270,7 @@
 			</div>
 		</div>
 	</div>
-    <br>
+    <br><br>
     <a href="#" class="btn btn-primary" id="advancedSearchBtn" style="float: right;">Search</a>
 	<br>
     {{Form::close()}}

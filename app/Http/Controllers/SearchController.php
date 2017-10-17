@@ -36,8 +36,7 @@ class SearchController extends Controller
 		if(!$q || ($type && $type != 'advancedSearch')) return redirect(route('home.index'));
 		$speciesArr = [];
 		if($type != 'advancedSearch') {
-			$speciesArr = Searchy::search('species')->fields('species_name', 'common_name', 'family')->query($q)->get();
-			//$speciesArr = Searchy::search('species')->fields('species_name')->select('species_name', 'id')->query($q)->get();
+			$speciesArr = Searchy::driver('simple')->search('species')->fields('species_name', 'common_name', 'family')->query($q)->get();
 		} else {
 			$q = json_decode($q, true);
 			if(isset($q['_token'])) unset($q['_token']);
@@ -45,7 +44,7 @@ class SearchController extends Controller
 				if($value == '') unset($q[$key]);
 			}
 			foreach ($q as $key => $value) {
-				$data = Searchy::search('species')->fields($key)->select('species_name', 'id')->query($value)->get()->toArray();
+				$data = Searchy::driver('simple')->search('species')->fields($key)->select('species_name', 'id')->query($value)->get()->toArray();
 				if(!count($speciesArr)) {
 					$speciesArr = $data;
 				} else {
