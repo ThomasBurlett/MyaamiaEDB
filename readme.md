@@ -12,7 +12,7 @@ For Administrators
 For Users
 
 ## Contributors
-## Senior Design Students
+ - Senior Design Students:
 Mingchao Liao ([liaom@miamioh.edu](mailto:liaom@miamioh.edu))
 
 Joshua Dooley ([dooleyj5@miamioh.edu](mailto:dooleyj5@miamioh.edu))
@@ -20,7 +20,7 @@ Joshua Dooley ([dooleyj5@miamioh.edu](mailto:dooleyj5@miamioh.edu))
 Meghan Styczynski ([styczymr@miamioh.edu](mailto:styczymr@miamioh.edu))
 
 Richard Bodziak ([bodziarr@miamioh.edu](mailto:bodziarr@miamioh.edu))
-## Agile Launchpad Students
+ - Agile Launchpad Students:
 Steven Bower ([bowersj@miamioh.edu] (mailto:bowersj@miamioh.edu))
 
 Thomas Burlett ([burlette@miamioh.edu] (mailto:burlette@miamioh.edu))
