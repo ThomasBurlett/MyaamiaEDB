@@ -9,8 +9,6 @@ The ethnobotanical database is for the Myaamia Center and research community. Th
 For Administrators
  - [Installation Doc](https://gitlab.csi.miamioh.edu/liaom/edb/wikis/home)
 
-For Users
-
 ## Contributors
 ### Senior Design Students:
 Mingchao Liao ([liaom@miamioh.edu](mailto:liaom@miamioh.edu))
